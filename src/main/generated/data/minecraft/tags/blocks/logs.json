@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_log",
+    "crystal:light_gray_log",
+    "crystal:gray_log",
+    "crystal:black_log",
+    "crystal:brown_log",
+    "crystal:red_log",
+    "crystal:orange_log",
+    "crystal:yellow_log",
+    "crystal:lime_log",
+    "crystal:green_log",
+    "crystal:cyan_log",
+    "crystal:light_blue_log",
+    "crystal:blue_log",
+    "crystal:purple_log",
+    "crystal:magenta_log",
+    "crystal:pink_log"
+  ]
+}

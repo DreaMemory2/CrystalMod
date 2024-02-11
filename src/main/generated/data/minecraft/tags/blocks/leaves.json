@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_leaves",
+    "crystal:light_gray_leaves",
+    "crystal:gray_leaves",
+    "crystal:black_leaves",
+    "crystal:brown_leaves",
+    "crystal:red_leaves",
+    "crystal:orange_leaves",
+    "crystal:yellow_leaves",
+    "crystal:lime_leaves",
+    "crystal:green_leaves",
+    "crystal:cyan_leaves",
+    "crystal:light_blue_leaves",
+    "crystal:blue_leaves",
+    "crystal:purple_leaves",
+    "crystal:magenta_leaves",
+    "crystal:pink_leaves"
+  ]
+}

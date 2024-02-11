@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_sapling",
+    "crystal:light_gray_sapling",
+    "crystal:gray_sapling",
+    "crystal:black_sapling",
+    "crystal:brown_sapling",
+    "crystal:red_sapling",
+    "crystal:orange_sapling",
+    "crystal:yellow_sapling",
+    "crystal:lime_sapling",
+    "crystal:green_sapling",
+    "crystal:cyan_sapling",
+    "crystal:light_blue_sapling",
+    "crystal:blue_sapling",
+    "crystal:purple_sapling",
+    "crystal:magenta_sapling",
+    "crystal:pink_sapling"
+  ]
+}

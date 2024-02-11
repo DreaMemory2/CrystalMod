@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_dirt",
+    "crystal:light_gray_dirt",
+    "crystal:gray_dirt",
+    "crystal:black_dirt",
+    "crystal:brown_dirt",
+    "crystal:red_dirt",
+    "crystal:orange_dirt",
+    "crystal:yellow_dirt",
+    "crystal:lime_dirt",
+    "crystal:green_dirt",
+    "crystal:cyan_dirt",
+    "crystal:light_blue_dirt",
+    "crystal:blue_dirt",
+    "crystal:purple_dirt",
+    "crystal:magenta_dirt",
+    "crystal:pink_dirt"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "crystal",
+	"version": "1.0.0",
+	"name": "Crystal",
+	"description": "This is a Crystal Mod",
+	"authors": [
+		"Stalight"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/crystal/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.stalight.crystal.CrystalMod"
+		],
+		"client": [
+			"com.stalight.crystal.CrystalModClient"
+		],
+		"fabric-datagen": [
+			"com.stalight.crystal.CrystalModDataGenerator"
+		],
+		"terrablender": [
+			"com.stalight.crystal.CrystalMod"
+		]
+	},
+	"mixins": [
+		"mod.mixins.json"
+	],
+
+	"depends": {
+		"fabricloader": ">=0.15.2",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

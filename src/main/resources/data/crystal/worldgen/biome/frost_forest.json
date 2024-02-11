@@ -1,0 +1,23 @@
+{
+  "temperature": -0.7,
+  "downfall": 0.9,
+  "has_precipitation": true,
+  "effects": {
+    "sky_color": 15201279,
+    "fog_color": 12445687,
+    "water_color": 11394024,
+    "water_fog_color": 7456743,
+    "grass_color": 15201279,
+    "foliage_color": 15201279,
+    "grass_color_modifier": "none"
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ]
+}
+

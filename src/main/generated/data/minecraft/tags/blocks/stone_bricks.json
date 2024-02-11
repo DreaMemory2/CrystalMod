@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_stone_brick",
+    "crystal:light_gray_stone_brick",
+    "crystal:gray_stone_brick",
+    "crystal:black_stone_brick",
+    "crystal:brown_stone_brick",
+    "crystal:red_stone_brick",
+    "crystal:orange_stone_brick",
+    "crystal:yellow_stone_brick",
+    "crystal:lime_stone_brick",
+    "crystal:green_stone_brick",
+    "crystal:cyan_stone_brick",
+    "crystal:light_blue_stone_brick",
+    "crystal:blue_stone_brick",
+    "crystal:purple_stone_brick",
+    "crystal:magenta_stone_brick",
+    "crystal:pink_stone_brick"
+  ]
+}

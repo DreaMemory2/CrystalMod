@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "crystal:white_stone",
+    "crystal:light_gray_stone",
+    "crystal:gray_stone",
+    "crystal:black_stone",
+    "crystal:brown_stone",
+    "crystal:red_stone",
+    "crystal:orange_stone",
+    "crystal:yellow_stone",
+    "crystal:lime_stone",
+    "crystal:green_stone",
+    "crystal:cyan_stone",
+    "crystal:light_blue_stone",
+    "crystal:blue_stone",
+    "crystal:purple_stone",
+    "crystal:magenta_stone",
+    "crystal:pink_stone"
+  ]
+}
