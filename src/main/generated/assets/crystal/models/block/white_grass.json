@@ -4,6 +4,6 @@
     "bottom": "crystal:block/white_dirt",
     "particle": "crystal:block/white_dirt",
     "side": "crystal:block/white_grass_side",
-    "top": "minecraft:block/snow_block"
+    "top": "minecraft:block/snow"
   }
 }

@@ -2,6 +2,7 @@ package com.stalight.crystal.world.feature;
 
 import com.stalight.crystal.CrystalMod;
 import com.stalight.crystal.block.BlockList;
+import com.stalight.crystal.register.ModBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -38,37 +39,37 @@ public class TreeConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable) {
         ConfiguredFeatures.register(featureRegisterable, WHITE_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.whiteLog, BlockList.whiteDirt, BlockList.whiteLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.whiteLog, ModBlockRegistry.whiteDirt, BlockList.whiteLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, LIGHT_GRAY_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.lightGrayLog, BlockList.lightGrayDirt, BlockList.lightGrayLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.lightGrayLog, ModBlockRegistry.lightGrayDirt, BlockList.lightGrayLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, GRAY_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.grayLog, BlockList.grayDirt, BlockList.grayLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.grayLog, ModBlockRegistry.grayDirt, BlockList.grayLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, BLACK_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.blackLog, BlockList.blackDirt, BlockList.blackLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.blackLog, ModBlockRegistry.blackDirt, BlockList.blackLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, BROWN_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.brownLog, BlockList.brownDirt, BlockList.brownLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.brownLog, ModBlockRegistry.brownDirt, BlockList.brownLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, RED_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.redLog, BlockList.redDirt, BlockList.redLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.redLog, ModBlockRegistry.redDirt, BlockList.redLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, ORANGE_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.orangeLog, BlockList.orangeDirt, BlockList.orangeLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.orangeLog, ModBlockRegistry.orangeDirt, BlockList.orangeLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, YELLOW_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.yellowLog, BlockList.yellowDirt, BlockList.yellowLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.yellowLog, ModBlockRegistry.yellowDirt, BlockList.yellowLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, LIME_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.limeLog, BlockList.limeDirt, BlockList.limeLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.limeLog, ModBlockRegistry.limeDirt, BlockList.limeLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, GREEN_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.greenLog, BlockList.greenDirt, BlockList.greenLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.greenLog, ModBlockRegistry.greenDirt, BlockList.greenLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, CYAN_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.cyanLog, BlockList.cyanDirt, BlockList.cyanLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.cyanLog, ModBlockRegistry.cyanDirt, BlockList.cyanLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, LIGHT_BLUE_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.lightBlueLog, BlockList.lightBlueDirt, BlockList.lightBlueLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.lightBlueLog, ModBlockRegistry.lightBlueDirt, BlockList.lightBlueLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, BLUE_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.blueLog, BlockList.blueDirt, BlockList.blueLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.blueLog, ModBlockRegistry.blueDirt, BlockList.blueLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, PURPLE_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.purpleLog, BlockList.purpleDirt, BlockList.purpleLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.purpleLog, ModBlockRegistry.purpleDirt, BlockList.purpleLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, MAGENTA_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.magentaLog, BlockList.magentaDirt, BlockList.magentaLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.magentaLog, ModBlockRegistry.magentaDirt, BlockList.magentaLeaves).build());
         ConfiguredFeatures.register(featureRegisterable, PINK_TREE, Feature.TREE,
-                TreeConfiguredFeatures.tree(BlockList.pinkLog, BlockList.pinkDirt, BlockList.pinkLeaves).build());
+                TreeConfiguredFeatures.tree(BlockList.pinkLog, ModBlockRegistry.pinkDirt, BlockList.pinkLeaves).build());
     }
 
     private static TreeFeatureConfig.Builder tree(Block log, Block leaves, Block dirt) {

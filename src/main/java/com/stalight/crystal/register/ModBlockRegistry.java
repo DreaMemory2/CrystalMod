@@ -2,6 +2,7 @@ package com.stalight.crystal.register;
 
 import com.stalight.crystal.CrystalMod;
 import com.stalight.crystal.block.BlockList;
+import com.stalight.crystal.block.CrystalGrassBlock;
 import com.stalight.crystal.block.SaplingGenerators;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,6 +15,43 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlockRegistry {
+
+    public static Block whiteDirt = registerBlocks("white_dirt", Blocks.DIRT);
+    public static Block lightGrayDirt = registerBlocks("light_gray_dirt", Blocks.DIRT);
+    public static Block grayDirt = registerBlocks("gray_dirt", Blocks.DIRT);
+    public static Block blackDirt = registerBlocks("black_dirt", Blocks.DIRT);
+    public static Block brownDirt = registerBlocks("brown_dirt", Blocks.DIRT);
+    public static Block redDirt = registerBlocks("red_dirt", Blocks.DIRT);
+    public static Block orangeDirt = registerBlocks("orange_dirt", Blocks.DIRT);
+    public static Block yellowDirt = registerBlocks("yellow_dirt", Blocks.DIRT);
+    public static Block limeDirt = registerBlocks("lime_dirt", Blocks.DIRT);
+    public static Block greenDirt = registerBlocks("green_dirt", Blocks.DIRT);
+    public static Block cyanDirt = registerBlocks("cyan_dirt", Blocks.DIRT);
+    public static Block lightBlueDirt = registerBlocks("light_blue_dirt", Blocks.DIRT);
+    public static Block blueDirt = registerBlocks("blue_dirt", Blocks.DIRT);
+    public static Block purpleDirt = registerBlocks("purple_dirt", Blocks.DIRT);
+    public static Block magentaDirt = registerBlocks("magenta_dirt", Blocks.DIRT);
+    public static Block pinkDirt = registerBlocks("pink_dirt", Blocks.DIRT);
+
+    public static Block whiteStone = registerBlocks("white_stone", Blocks.STONE);
+    public static Block lightGrayStone = registerBlocks("light_gray_stone", Blocks.STONE);
+    public static Block grayStone = registerBlocks("gray_stone", Blocks.STONE);
+    public static Block blackStone = registerBlocks("black_stone", Blocks.STONE);
+    public static Block brownStone = registerBlocks("brown_stone", Blocks.STONE);
+    public static Block redStone = registerBlocks("red_stone", Blocks.STONE);
+    public static Block orangeStone = registerBlocks("orange_stone", Blocks.STONE);
+    public static Block yellowStone = registerBlocks("yellow_stone", Blocks.STONE);
+    public static Block limeStone = registerBlocks("lime_stone", Blocks.STONE);
+    public static Block greenStone = registerBlocks("green_stone", Blocks.STONE);
+    public static Block cyanStone = registerBlocks("cyan_stone", Blocks.STONE);
+    public static Block lightBlueStone = registerBlocks("light_blue_stone", Blocks.STONE);
+    public static Block blueStone = registerBlocks("blue_stone", Blocks.STONE);
+    public static Block purpleStone = registerBlocks("purple_stone", Blocks.STONE);
+    public static Block magentaStone = registerBlocks("magenta_stone", Blocks.STONE);
+    public static Block pinkStone = registerBlocks("pink_stone", Blocks.STONE);
+
+    public static Block whiteGrassBlock = registerGrassBlock("white_grass", ModBlockRegistry.whiteGrassBlock);
+
     public static void registerBlocks() {
 
         BlockList.whiteStoneBrick = registerBlocks("white_stone_brick", Blocks.STONE_BRICKS);
@@ -32,40 +70,6 @@ public class ModBlockRegistry {
         BlockList.purpleStoneBrick = registerBlocks("purple_stone_brick", Blocks.STONE_BRICKS);
         BlockList.magentaStoneBrick = registerBlocks("magenta_stone_brick", Blocks.STONE_BRICKS);
         BlockList.pinkStoneBrick = registerBlocks("pink_stone_brick", Blocks.STONE_BRICKS);
-
-        BlockList.whiteStone = registerBlocks("white_stone", Blocks.STONE);
-        BlockList.lightGrayStone = registerBlocks("light_gray_stone", Blocks.STONE);
-        BlockList.grayStone = registerBlocks("gray_stone", Blocks.STONE);
-        BlockList.blackStone = registerBlocks("black_stone", Blocks.STONE);
-        BlockList.brownStone = registerBlocks("brown_stone", Blocks.STONE);
-        BlockList.redStone = registerBlocks("red_stone", Blocks.STONE);
-        BlockList.orangeStone = registerBlocks("orange_stone", Blocks.STONE);
-        BlockList.yellowStone = registerBlocks("yellow_stone", Blocks.STONE);
-        BlockList.limeStone = registerBlocks("lime_stone", Blocks.STONE);
-        BlockList.greenStone = registerBlocks("green_stone", Blocks.STONE);
-        BlockList.cyanStone = registerBlocks("cyan_stone", Blocks.STONE);
-        BlockList.lightBlueStone = registerBlocks("light_blue_stone", Blocks.STONE);
-        BlockList.blueStone = registerBlocks("blue_stone", Blocks.STONE);
-        BlockList.purpleStone = registerBlocks("purple_stone", Blocks.STONE);
-        BlockList.magentaStone = registerBlocks("magenta_stone", Blocks.STONE);
-        BlockList.pinkStone = registerBlocks("pink_stone", Blocks.STONE);
-
-        BlockList.whiteDirt = registerBlocks("white_dirt", Blocks.DIRT);
-        BlockList.lightGrayDirt = registerBlocks("light_gray_dirt", Blocks.DIRT);
-        BlockList.grayDirt = registerBlocks("gray_dirt", Blocks.DIRT);
-        BlockList.blackDirt = registerBlocks("black_dirt", Blocks.DIRT);
-        BlockList.brownDirt = registerBlocks("brown_dirt", Blocks.DIRT);
-        BlockList.redDirt = registerBlocks("red_dirt", Blocks.DIRT);
-        BlockList.orangeDirt = registerBlocks("orange_dirt", Blocks.DIRT);
-        BlockList.yellowDirt = registerBlocks("yellow_dirt", Blocks.DIRT);
-        BlockList.limeDirt = registerBlocks("lime_dirt", Blocks.DIRT);
-        BlockList.greenDirt = registerBlocks("green_dirt", Blocks.DIRT);
-        BlockList.cyanDirt = registerBlocks("cyan_dirt", Blocks.DIRT);
-        BlockList.lightBlueDirt = registerBlocks("light_blue_dirt", Blocks.DIRT);
-        BlockList.blueDirt = registerBlocks("blue_dirt", Blocks.DIRT);
-        BlockList.purpleDirt = registerBlocks("purple_dirt", Blocks.DIRT);
-        BlockList.magentaDirt = registerBlocks("magenta_dirt", Blocks.DIRT);
-        BlockList.pinkDirt = registerBlocks("pink_dirt", Blocks.DIRT);
 
         BlockList.whiteLeaves = registerLeavesBlock("white_leaves");
         BlockList.lightGrayLeaves = registerLeavesBlock("light_gray_leaves");
@@ -133,6 +137,10 @@ public class ModBlockRegistry {
 
     private static Block registerLeavesBlock(String id) {
         return registerBlock(id, new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)));
+    }
+
+    private static Block registerGrassBlock(String id, Block block) {
+        return registerBlock(id, new CrystalGrassBlock(block));
     }
 
     private static Block registerBlock(String id, Block block) {

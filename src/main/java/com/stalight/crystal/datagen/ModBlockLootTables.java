@@ -2,6 +2,7 @@ package com.stalight.crystal.datagen;
 
 import com.stalight.crystal.CrystalMod;
 import com.stalight.crystal.block.BlockList;
+import com.stalight.crystal.register.ModBlockRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
 import net.minecraft.block.Block;
@@ -67,70 +68,70 @@ public class ModBlockLootTables extends SimpleFabricLootTableProvider {
                 createBlockLootTables(BlockList.pinkLog));
 
         exporter.accept(registerLootTables("white_dirt"),
-                createBlockLootTables(BlockList.whiteDirt));
+                createBlockLootTables(ModBlockRegistry.whiteDirt));
         exporter.accept(registerLootTables("light_gray_dirt"),
-                createBlockLootTables(BlockList.lightGrayDirt));
+                createBlockLootTables(ModBlockRegistry.lightGrayDirt));
         exporter.accept(registerLootTables("gray_dirt"),
-                createBlockLootTables(BlockList.grayDirt));
+                createBlockLootTables(ModBlockRegistry.grayDirt));
         exporter.accept(registerLootTables("black_dirt"),
-                createBlockLootTables(BlockList.blackDirt));
+                createBlockLootTables(ModBlockRegistry.blackDirt));
         exporter.accept(registerLootTables("brown_dirt"),
-                createBlockLootTables(BlockList.brownDirt));
+                createBlockLootTables(ModBlockRegistry.brownDirt));
         exporter.accept(registerLootTables("red_dirt"),
-                createBlockLootTables(BlockList.redDirt));
+                createBlockLootTables(ModBlockRegistry.redDirt));
         exporter.accept(registerLootTables("orange_dirt"),
-                createBlockLootTables(BlockList.orangeDirt));
+                createBlockLootTables(ModBlockRegistry.orangeDirt));
         exporter.accept(registerLootTables("yellow_dirt"),
-                createBlockLootTables(BlockList.yellowDirt));
+                createBlockLootTables(ModBlockRegistry.yellowDirt));
         exporter.accept(registerLootTables("lime_dirt"),
-                createBlockLootTables(BlockList.limeDirt));
+                createBlockLootTables(ModBlockRegistry.limeDirt));
         exporter.accept(registerLootTables("green_dirt"),
-                createBlockLootTables(BlockList.greenDirt));
+                createBlockLootTables(ModBlockRegistry.greenDirt));
         exporter.accept(registerLootTables("cyan_dirt"),
-                createBlockLootTables(BlockList.cyanDirt));
+                createBlockLootTables(ModBlockRegistry.cyanDirt));
         exporter.accept(registerLootTables("light_blue_dirt"),
-                createBlockLootTables(BlockList.lightBlueDirt));
+                createBlockLootTables(ModBlockRegistry.lightBlueDirt));
         exporter.accept(registerLootTables("blue_dirt"),
-                createBlockLootTables(BlockList.blueDirt));
+                createBlockLootTables(ModBlockRegistry.blueDirt));
         exporter.accept(registerLootTables("magenta_dirt"),
-                createBlockLootTables(BlockList.magentaDirt));
+                createBlockLootTables(ModBlockRegistry.magentaDirt));
         exporter.accept(registerLootTables("purple_dirt"),
-                createBlockLootTables(BlockList.purpleDirt));
+                createBlockLootTables(ModBlockRegistry.purpleDirt));
         exporter.accept(registerLootTables("pink_dirt"),
-                createBlockLootTables(BlockList.pinkDirt));
+                createBlockLootTables(ModBlockRegistry.pinkDirt));
 
         exporter.accept(registerLootTables("white_stone"),
-                createStoneLootTables(BlockList.whiteStone, BlockList.whiteStone));
+                createStoneLootTables(ModBlockRegistry.whiteStone, ModBlockRegistry.whiteStone));
         exporter.accept(registerLootTables("light_gray_stone"),
-                createStoneLootTables(BlockList.lightGrayStone, BlockList.lightGrayStone));
+                createStoneLootTables(ModBlockRegistry.lightGrayStone, ModBlockRegistry.lightGrayStone));
         exporter.accept(registerLootTables("gray_stone"),
-                createStoneLootTables(BlockList.grayStone, BlockList.grayStone));
+                createStoneLootTables(ModBlockRegistry.grayStone, ModBlockRegistry.grayStone));
         exporter.accept(registerLootTables("black_stone"),
-                createStoneLootTables(BlockList.blackStone, BlockList.blackStone));
+                createStoneLootTables(ModBlockRegistry.blackStone, ModBlockRegistry.blackStone));
         exporter.accept(registerLootTables("brown_stone"),
-                createStoneLootTables(BlockList.brownStone, BlockList.brownStone));
+                createStoneLootTables(ModBlockRegistry.brownStone, ModBlockRegistry.brownStone));
         exporter.accept(registerLootTables("red_stone"),
-                createStoneLootTables(BlockList.redStone, BlockList.redStone));
+                createStoneLootTables(ModBlockRegistry.redStone, ModBlockRegistry.redStone));
         exporter.accept(registerLootTables("orange_stone"),
-                createStoneLootTables(BlockList.orangeStone, BlockList.orangeStone));
+                createStoneLootTables(ModBlockRegistry.orangeStone, ModBlockRegistry.orangeStone));
         exporter.accept(registerLootTables("yellow_stone"),
-                createStoneLootTables(BlockList.yellowStone, BlockList.yellowStone));
+                createStoneLootTables(ModBlockRegistry.yellowStone, ModBlockRegistry.yellowStone));
         exporter.accept(registerLootTables("lime_stone"),
-                createStoneLootTables(BlockList.limeStone, BlockList.limeStone));
+                createStoneLootTables(ModBlockRegistry.limeStone, ModBlockRegistry.limeStone));
         exporter.accept(registerLootTables("green_stone"),
-                createStoneLootTables(BlockList.greenStone, BlockList.greenStone));
+                createStoneLootTables(ModBlockRegistry.greenStone, ModBlockRegistry.greenStone));
         exporter.accept(registerLootTables("cyan_stone"),
-                createStoneLootTables(BlockList.cyanStone, BlockList.cyanStone));
+                createStoneLootTables(ModBlockRegistry.cyanStone, ModBlockRegistry.cyanStone));
         exporter.accept(registerLootTables("light_blue_stone"),
-                createStoneLootTables(BlockList.lightBlueStone, BlockList.lightBlueStone));
+                createStoneLootTables(ModBlockRegistry.lightBlueStone, ModBlockRegistry.lightBlueStone));
         exporter.accept(registerLootTables("blue_stone"),
-                createStoneLootTables(BlockList.blueStone, BlockList.blueStone));
+                createStoneLootTables(ModBlockRegistry.blueStone, ModBlockRegistry.blueStone));
         exporter.accept(registerLootTables("magenta_stone"),
-                createStoneLootTables(BlockList.magentaStone, BlockList.magentaStone));
+                createStoneLootTables(ModBlockRegistry.magentaStone, ModBlockRegistry.magentaStone));
         exporter.accept(registerLootTables("purple_stone"),
-                createStoneLootTables(BlockList.purpleStone, BlockList.purpleStone));
+                createStoneLootTables(ModBlockRegistry.purpleStone, ModBlockRegistry.purpleStone));
         exporter.accept(registerLootTables("pink_stone"),
-                createStoneLootTables(BlockList.pinkStone, BlockList.pinkStone));
+                createStoneLootTables(ModBlockRegistry.pinkStone, ModBlockRegistry.pinkStone));
 
         exporter.accept(registerLootTables("white_leaves"),
                 createLeavesLootTables(BlockList.whiteLeaves, BlockList.whiteSapling, Items.WHITE_DYE));
@@ -184,7 +185,7 @@ public class ModBlockLootTables extends SimpleFabricLootTableProvider {
     }
 
     private Identifier registerLootTables(String id) {
-        return new Identifier(CrystalMod.MODID, id);
+        return new Identifier(CrystalMod.MODID, "blocks/" + id);
     }
 
     private LootTable.Builder createBlockLootTables(Block block) {
