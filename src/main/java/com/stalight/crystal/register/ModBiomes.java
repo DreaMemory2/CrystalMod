@@ -9,6 +9,8 @@ import net.minecraft.world.biome.Biome;
 public class ModBiomes {
     public static RegistryKey<Biome> frostForest = register("frost_forest");
 
+    public static RegistryKey<Biome> darkForest = register("dark_forest");
+
     public static void registerBiomes() {
 
     }

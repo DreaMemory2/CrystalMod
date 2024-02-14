@@ -2,7 +2,7 @@ package com.stalight.crystal.world;
 
 import com.google.common.collect.ImmutableList;
 import com.stalight.crystal.register.ModBiomes;
-import com.stalight.crystal.register.ModBlockRegistry;
+import com.stalight.crystal.register.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKey;
@@ -21,26 +21,15 @@ public class SurfaceRuleData {
 
         builder.add(MaterialRules.condition(MaterialRules.surface(), MaterialRules.sequence(
 
-                surface(Blocks.GRASS_BLOCK, ModBlockRegistry.whiteDirt, ModBiomes.frostForest)
+                surface(ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt, ModBiomes.frostForest)
         )));
 
-        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), makeStateRule(ModBlockRegistry.whiteStone)));
-
-        // 深板岩层
-        /*builder.add(MaterialRules.condition(MaterialRules.verticalGradient("minecraft:deepslate",
-                        YOffset.fixed(0), YOffset.fixed(8)),
-                MaterialRules.block(Blocks.DEEPSLATE.getDefaultState())));*/
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), makeStateRule(ModBlocks.whiteStone)));
 
         return MaterialRules.sequence(builder.build().toArray(MaterialRules.MaterialRule[]::new));
     }
 
-    /*private static MaterialRules.MaterialRule withoutWaterSafe(MaterialRules.MaterialRule sequence) {
-         return MaterialRules.condition(MaterialRules.surface(),
-                 MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR,
-                         MaterialRules.condition(MaterialRules.water(-1, 0), sequence)));
-    }*/
-
-    private static MaterialRules.MaterialRule surface(Block grassBlock, Block dirt, RegistryKey<Biome>... biomes) {
+    private static MaterialRules.MaterialRule surface(Block grassBlock, Block dirt, RegistryKey<Biome> ... biomes) {
         return MaterialRules.condition(MaterialRules.biome(biomes),
                 MaterialRules.sequence(
                         /*地表设置*/surfaceSetting(grassBlock, dirt),

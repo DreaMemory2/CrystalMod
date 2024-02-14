@@ -16,8 +16,10 @@
   "carvers": {},
   "features": [
     [
+      "crystal:white_checked"
+    ],
+    [
       "minecraft:freeze_top_layer"
     ]
   ]
 }
-

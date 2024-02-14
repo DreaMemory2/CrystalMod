@@ -1,7 +1,7 @@
 package com.stalight.crystal.datagen;
 
 import com.stalight.crystal.block.BlockList;
-import com.stalight.crystal.register.ModBlockRegistry;
+import com.stalight.crystal.register.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -30,39 +30,39 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
         translationBuilder.add(BlockList.purpleStoneBrick, "Purple Stone Brick");
         translationBuilder.add(BlockList.pinkStoneBrick, "Pink Stone Brick");
 
-        translationBuilder.add(ModBlockRegistry.whiteStone, "White Stone");
-        translationBuilder.add(ModBlockRegistry.lightGrayStone, "Light Gray Stone");
-        translationBuilder.add(ModBlockRegistry.grayStone, "Gray Stone");
-        translationBuilder.add(ModBlockRegistry.blackStone, "Black Stone");
-        translationBuilder.add(ModBlockRegistry.brownStone, "Brown Stone");
-        translationBuilder.add(ModBlockRegistry.redStone, "Red Stone");
-        translationBuilder.add(ModBlockRegistry.orangeStone, "Orange Stone");
-        translationBuilder.add(ModBlockRegistry.yellowStone, "Yellow Stone");
-        translationBuilder.add(ModBlockRegistry.limeStone, "Lime Stone");
-        translationBuilder.add(ModBlockRegistry.greenStone, "Green Stone");
-        translationBuilder.add(ModBlockRegistry.cyanStone, "Cyan Stone");
-        translationBuilder.add(ModBlockRegistry.lightBlueStone, "Light Blue Stone");
-        translationBuilder.add(ModBlockRegistry.blueStone, "Blue Stone");
-        translationBuilder.add(ModBlockRegistry.magentaStone, "Magenta Stone");
-        translationBuilder.add(ModBlockRegistry.purpleStone, "Purple Stone");
-        translationBuilder.add(ModBlockRegistry.pinkStone, "Pink Stone");
+        translationBuilder.add(ModBlocks.whiteStone, "White Stone");
+        translationBuilder.add(ModBlocks.lightGrayStone, "Light Gray Stone");
+        translationBuilder.add(ModBlocks.grayStone, "Gray Stone");
+        translationBuilder.add(ModBlocks.blackStone, "Black Stone");
+        translationBuilder.add(ModBlocks.brownStone, "Brown Stone");
+        translationBuilder.add(ModBlocks.redStone, "Red Stone");
+        translationBuilder.add(ModBlocks.orangeStone, "Orange Stone");
+        translationBuilder.add(ModBlocks.yellowStone, "Yellow Stone");
+        translationBuilder.add(ModBlocks.limeStone, "Lime Stone");
+        translationBuilder.add(ModBlocks.greenStone, "Green Stone");
+        translationBuilder.add(ModBlocks.cyanStone, "Cyan Stone");
+        translationBuilder.add(ModBlocks.lightBlueStone, "Light Blue Stone");
+        translationBuilder.add(ModBlocks.blueStone, "Blue Stone");
+        translationBuilder.add(ModBlocks.magentaStone, "Magenta Stone");
+        translationBuilder.add(ModBlocks.purpleStone, "Purple Stone");
+        translationBuilder.add(ModBlocks.pinkStone, "Pink Stone");
 
-        translationBuilder.add(ModBlockRegistry.whiteDirt, "White Dirt");
-        translationBuilder.add(ModBlockRegistry.lightGrayDirt, "Light Gray Dirt");
-        translationBuilder.add(ModBlockRegistry.grayDirt, "Gray Dirt");
-        translationBuilder.add(ModBlockRegistry.blackDirt, "Black Dirt");
-        translationBuilder.add(ModBlockRegistry.brownDirt, "Brown dirt");
-        translationBuilder.add(ModBlockRegistry.redDirt, "Red Dirt");
-        translationBuilder.add(ModBlockRegistry.orangeDirt, "Orange Dirt");
-        translationBuilder.add(ModBlockRegistry.yellowDirt, "Yellow Dirt");
-        translationBuilder.add(ModBlockRegistry.limeDirt, "Lime Dirt");
-        translationBuilder.add(ModBlockRegistry.greenDirt, "Green Dirt");
-        translationBuilder.add(ModBlockRegistry.cyanDirt, "Cyan Dirt");
-        translationBuilder.add(ModBlockRegistry.lightBlueDirt, "Light Blue Dirt");
-        translationBuilder.add(ModBlockRegistry.blueDirt, "Blue Dirt");
-        translationBuilder.add(ModBlockRegistry.magentaDirt, "Magenta Dirt");
-        translationBuilder.add(ModBlockRegistry.purpleDirt, "Purple Dirt");
-        translationBuilder.add(ModBlockRegistry.pinkDirt, "Pink Dirt");
+        translationBuilder.add(ModBlocks.whiteDirt, "White Dirt");
+        translationBuilder.add(ModBlocks.lightGrayDirt, "Light Gray Dirt");
+        translationBuilder.add(ModBlocks.grayDirt, "Gray Dirt");
+        translationBuilder.add(ModBlocks.blackDirt, "Black Dirt");
+        translationBuilder.add(ModBlocks.brownDirt, "Brown dirt");
+        translationBuilder.add(ModBlocks.redDirt, "Red Dirt");
+        translationBuilder.add(ModBlocks.orangeDirt, "Orange Dirt");
+        translationBuilder.add(ModBlocks.yellowDirt, "Yellow Dirt");
+        translationBuilder.add(ModBlocks.limeDirt, "Lime Dirt");
+        translationBuilder.add(ModBlocks.greenDirt, "Green Dirt");
+        translationBuilder.add(ModBlocks.cyanDirt, "Cyan Dirt");
+        translationBuilder.add(ModBlocks.lightBlueDirt, "Light Blue Dirt");
+        translationBuilder.add(ModBlocks.blueDirt, "Blue Dirt");
+        translationBuilder.add(ModBlocks.magentaDirt, "Magenta Dirt");
+        translationBuilder.add(ModBlocks.purpleDirt, "Purple Dirt");
+        translationBuilder.add(ModBlocks.pinkDirt, "Pink Dirt");
 
         translationBuilder.add(BlockList.whiteLog, "White Log");
         translationBuilder.add(BlockList.lightGrayLog, "Light Gray Log");
@@ -114,6 +114,23 @@ public class ModLanguageGenerator extends FabricLanguageProvider {
         translationBuilder.add(BlockList.purpleSapling, "Purple Sapling");
         translationBuilder.add(BlockList.magentaSapling, "Magenta Sapling");
         translationBuilder.add(BlockList.pinkSapling, "Pink Sapling");
+
+        translationBuilder.add(ModBlocks.whiteGrassBlock, "White Grass");
+        translationBuilder.add(ModBlocks.lightGrayGrassBlock, "Light Gray Grass");
+        translationBuilder.add(ModBlocks.grayGrassBlock, "Gray Grass");
+        translationBuilder.add(ModBlocks.blackGrassBlock, "Black Grass");
+        translationBuilder.add(ModBlocks.brownGrassBlock, "Brown Grass");
+        translationBuilder.add(ModBlocks.redGrassBlock, "Red Grass");
+        translationBuilder.add(ModBlocks.orangeGrassBlock, "Orange Grass");
+        translationBuilder.add(ModBlocks.yellowGrassBlock, "Yellow Grass");
+        translationBuilder.add(ModBlocks.limeGrassBlock, "Lime Grass");
+        translationBuilder.add(ModBlocks.greenGrassBlock, "Green Grass");
+        translationBuilder.add(ModBlocks.cyanGrassBlock, "Cyan Grass");
+        translationBuilder.add(ModBlocks.lightBlueGrassBlock, "Light Blue Grass");
+        translationBuilder.add(ModBlocks.blueGrassBlock, "Blue Grass");
+        translationBuilder.add(ModBlocks.purpleGrassBlock, "Purple Grass");
+        translationBuilder.add(ModBlocks.magentaGrassBlock, "Magenta Grass");
+        translationBuilder.add(ModBlocks.pinkGrassBlock, "Pink Grass");
 
         translationBuilder.add("biome.crystal.frost_forest", "Frost Forest");
 

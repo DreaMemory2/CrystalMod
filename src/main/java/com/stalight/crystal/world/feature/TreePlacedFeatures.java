@@ -30,6 +30,8 @@ public class TreePlacedFeatures {
     public static final RegistryKey<PlacedFeature> PURPLE_CHECKED = registry("purple_checked");
     public static final RegistryKey<PlacedFeature> MAGENTA_CHECKED = registry("magenta_checked");
     public static final RegistryKey<PlacedFeature> PINK_CHECKED = registry("pink_checked");
+    // 灰烬灌木
+    public static final RegistryKey<PlacedFeature> EMBER_BUSH = PlacedFeatures.of("ember_bush");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -49,6 +51,7 @@ public class TreePlacedFeatures {
         RegistryEntry.Reference<ConfiguredFeature<?, ?>> purpleTree = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.PURPLE_TREE);
         RegistryEntry.Reference<ConfiguredFeature<?, ?>> magentaTree = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.MAGENTA_TREE);
         RegistryEntry.Reference<ConfiguredFeature<?, ?>> pinkTree = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.PINK_TREE);
+        RegistryEntry.Reference<ConfiguredFeature<?, ?>> ember_bush = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.EMBER_BUSH);
 
         PlacedFeatures.register(featureRegisterable, WHITE_CHECKED, whiteTree, PlacedFeatures.wouldSurvive(BlockList.whiteSapling));
         PlacedFeatures.register(featureRegisterable, LIGHT_GRAY_CHECKED, lightGrayTree, PlacedFeatures.wouldSurvive(BlockList.lightGraySapling));
@@ -66,7 +69,9 @@ public class TreePlacedFeatures {
         PlacedFeatures.register(featureRegisterable, PURPLE_CHECKED, purpleTree, PlacedFeatures.wouldSurvive(BlockList.purpleSapling));
         PlacedFeatures.register(featureRegisterable, MAGENTA_CHECKED, magentaTree, PlacedFeatures.wouldSurvive(BlockList.magentaSapling));
         PlacedFeatures.register(featureRegisterable, PINK_CHECKED, pinkTree, PlacedFeatures.wouldSurvive(BlockList.pinkSapling));
-;    }
+
+        PlacedFeatures.register(featureRegisterable, EMBER_BUSH, ember_bush, PlacedFeatures.wouldSurvive(BlockList.lightGraySapling));
+    }
 
     private static RegistryKey<PlacedFeature> registry(String id) {
         return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(CrystalMod.MODID, id));

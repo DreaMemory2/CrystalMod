@@ -3,7 +3,6 @@ package com.stalight.crystal;
 import com.stalight.crystal.register.*;
 import com.stalight.crystal.world.SurfaceRuleData;
 import net.fabricmc.api.ModInitializer;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import terrablender.api.SurfaceRuleManager;
@@ -16,13 +15,14 @@ public class CrystalMod implements ModInitializer, TerraBlenderApi {
 	@Override
 	public void onInitialize() {
 		/* Block and Item */
-		ModBlockRegistry.registerBlocks();
+		ModBlocks.registerBlocks();
 
 		/* Registry */
 		ModItemGroup.registerItemGroup();
 		ModPortal.registerPortals();
 		ModDimension.registerDimensions();
 		ModBiomes.registerBiomes();
+		ModGeneration.registerGeneration();
 	}
 
 	@Override

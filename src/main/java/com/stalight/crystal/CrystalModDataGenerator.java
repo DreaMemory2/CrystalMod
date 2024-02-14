@@ -3,6 +3,7 @@ package com.stalight.crystal;
 import com.stalight.crystal.datagen.*;
 import com.stalight.crystal.world.feature.TreeConfiguredFeatures;
 import com.stalight.crystal.world.feature.TreePlacedFeatures;
+import com.stalight.crystal.world.feature.VegetationConfiguredFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -22,6 +23,8 @@ public class CrystalModDataGenerator implements DataGeneratorEntrypoint {
     @Override
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, TreeConfiguredFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, VegetationConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, TreePlacedFeatures::bootstrap);
+
     }
 }

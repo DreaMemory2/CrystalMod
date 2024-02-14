@@ -1,11 +1,10 @@
 package com.stalight.crystal.datagen;
 
 import com.stalight.crystal.block.BlockList;
-import com.stalight.crystal.register.ModBlockRegistry;
+import com.stalight.crystal.register.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.data.client.*;
 import net.minecraft.data.client.BlockStateModelGenerator.TintType;
 
@@ -34,39 +33,39 @@ public class ModModelGenerator extends FabricModelProvider {
         block.registerSimpleCubeAll(BlockList.purpleStoneBrick);
         block.registerSimpleCubeAll(BlockList.pinkStoneBrick);
 
-        block.registerSimpleCubeAll(ModBlockRegistry.whiteStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.lightGrayStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.grayStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.blackStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.brownStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.redStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.orangeStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.yellowStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.limeStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.greenStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.cyanStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.lightBlueStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.blueStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.magentaStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.purpleStone);
-        block.registerSimpleCubeAll(ModBlockRegistry.pinkStone);
+        block.registerSimpleCubeAll(ModBlocks.whiteStone);
+        block.registerSimpleCubeAll(ModBlocks.lightGrayStone);
+        block.registerSimpleCubeAll(ModBlocks.grayStone);
+        block.registerSimpleCubeAll(ModBlocks.blackStone);
+        block.registerSimpleCubeAll(ModBlocks.brownStone);
+        block.registerSimpleCubeAll(ModBlocks.redStone);
+        block.registerSimpleCubeAll(ModBlocks.orangeStone);
+        block.registerSimpleCubeAll(ModBlocks.yellowStone);
+        block.registerSimpleCubeAll(ModBlocks.limeStone);
+        block.registerSimpleCubeAll(ModBlocks.greenStone);
+        block.registerSimpleCubeAll(ModBlocks.cyanStone);
+        block.registerSimpleCubeAll(ModBlocks.lightBlueStone);
+        block.registerSimpleCubeAll(ModBlocks.blueStone);
+        block.registerSimpleCubeAll(ModBlocks.magentaStone);
+        block.registerSimpleCubeAll(ModBlocks.purpleStone);
+        block.registerSimpleCubeAll(ModBlocks.pinkStone);
 
-        block.registerSimpleCubeAll(ModBlockRegistry.whiteDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.lightGrayDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.grayDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.blackDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.brownDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.redDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.orangeDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.yellowDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.limeDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.greenDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.cyanDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.lightBlueDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.blueDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.magentaDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.purpleDirt);
-        block.registerSimpleCubeAll(ModBlockRegistry.pinkDirt);
+        block.registerSimpleCubeAll(ModBlocks.whiteDirt);
+        block.registerSimpleCubeAll(ModBlocks.lightGrayDirt);
+        block.registerSimpleCubeAll(ModBlocks.grayDirt);
+        block.registerSimpleCubeAll(ModBlocks.blackDirt);
+        block.registerSimpleCubeAll(ModBlocks.brownDirt);
+        block.registerSimpleCubeAll(ModBlocks.redDirt);
+        block.registerSimpleCubeAll(ModBlocks.orangeDirt);
+        block.registerSimpleCubeAll(ModBlocks.yellowDirt);
+        block.registerSimpleCubeAll(ModBlocks.limeDirt);
+        block.registerSimpleCubeAll(ModBlocks.greenDirt);
+        block.registerSimpleCubeAll(ModBlocks.cyanDirt);
+        block.registerSimpleCubeAll(ModBlocks.lightBlueDirt);
+        block.registerSimpleCubeAll(ModBlocks.blueDirt);
+        block.registerSimpleCubeAll(ModBlocks.magentaDirt);
+        block.registerSimpleCubeAll(ModBlocks.purpleDirt);
+        block.registerSimpleCubeAll(ModBlocks.pinkDirt);
 
         block.registerSimpleCubeAll(BlockList.whiteLeaves);
         block.registerSimpleCubeAll(BlockList.lightGrayLeaves);
@@ -119,8 +118,22 @@ public class ModModelGenerator extends FabricModelProvider {
         block.registerTintableCross(BlockList.purpleSapling, TintType.NOT_TINTED);
         block.registerTintableCross(BlockList.pinkSapling, TintType.NOT_TINTED);
 
-        registerGrassBlock(block, ModBlockRegistry.whiteGrassBlock, Blocks.SNOW, ModBlockRegistry.whiteDirt);
-        // registerGrassBlock(block, ModBlockRegistry.lightBlueStone, ModBlockRegistry.lightGrayDirt);
+        registerGrassBlock(block, ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt);
+        registerGrassBlock(block, ModBlocks.lightGrayGrassBlock, ModBlocks.lightGrayDirt);
+        registerGrassBlock(block, ModBlocks.grayGrassBlock, ModBlocks.grayDirt);
+        registerGrassBlock(block, ModBlocks.blackGrassBlock, ModBlocks.blackDirt);
+        registerGrassBlock(block, ModBlocks.brownGrassBlock, ModBlocks.brownDirt);
+        registerGrassBlock(block, ModBlocks.redGrassBlock, ModBlocks.redDirt);
+        registerGrassBlock(block, ModBlocks.orangeGrassBlock, ModBlocks.orangeDirt);
+        registerGrassBlock(block, ModBlocks.yellowGrassBlock, ModBlocks.yellowDirt);
+        registerGrassBlock(block, ModBlocks.limeGrassBlock, ModBlocks.limeDirt);
+        registerGrassBlock(block, ModBlocks.greenGrassBlock, ModBlocks.greenDirt);
+        registerGrassBlock(block, ModBlocks.cyanGrassBlock, ModBlocks.cyanDirt);
+        registerGrassBlock(block, ModBlocks.lightBlueGrassBlock, ModBlocks.lightBlueDirt);
+        registerGrassBlock(block, ModBlocks.blueGrassBlock, ModBlocks.blueDirt);
+        registerGrassBlock(block, ModBlocks.purpleGrassBlock, ModBlocks.purpleDirt);
+        registerGrassBlock(block, ModBlocks.magentaGrassBlock, ModBlocks.magentaDirt);
+        registerGrassBlock(block, ModBlocks.pinkGrassBlock, ModBlocks.pinkDirt);
     }
 
     @Override
@@ -128,12 +141,14 @@ public class ModModelGenerator extends FabricModelProvider {
 
     }
 
-    private void registerGrassBlock(BlockStateModelGenerator block, Block grassBlock, Block topBlock, Block dirt) {
+    private void registerGrassBlock(BlockStateModelGenerator block, Block grassBlock, Block dirt) {
         TextureMap texture = new TextureMap()
+                // 加入粒子材质: 粒子效果为泥土破坏粒子
+                .put(TextureKey.PARTICLE, TextureMap.getId(dirt))
                 // 底部为泥土材质
-                .put(TextureKey.BOTTOM, TextureMap.getId(dirt)).inherit(TextureKey.BOTTOM, TextureKey.PARTICLE)
+                .put(TextureKey.BOTTOM, TextureMap.getId(dirt))
                 // 顶部为草方块材质
-                .put(TextureKey.TOP, TextureMap.getId(topBlock))
+                .put(TextureKey.TOP, TextureMap.getSubId(grassBlock, "_top"))
                 // 侧面为带泥土的草方块
                 .put(TextureKey.SIDE, TextureMap.getSubId(grassBlock, "_side"));
         BlockStateVariant model = BlockStateVariant.create()

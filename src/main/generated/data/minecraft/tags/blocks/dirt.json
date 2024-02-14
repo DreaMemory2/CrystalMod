@@ -16,6 +16,22 @@
     "crystal:blue_dirt",
     "crystal:purple_dirt",
     "crystal:magenta_dirt",
-    "crystal:pink_dirt"
+    "crystal:pink_dirt",
+    "crystal:white_grass",
+    "crystal:light_gray_grass",
+    "crystal:gray_grass",
+    "crystal:black_grass",
+    "crystal:brown_grass",
+    "crystal:red_grass",
+    "crystal:orange_grass",
+    "crystal:yellow_grass",
+    "crystal:lime_grass",
+    "crystal:green_grass",
+    "crystal:cyan_grass",
+    "crystal:light_blue_grass",
+    "crystal:blue_grass",
+    "crystal:purple_grass",
+    "crystal:magenta_grass",
+    "crystal:pink_grass"
   ]
 }
