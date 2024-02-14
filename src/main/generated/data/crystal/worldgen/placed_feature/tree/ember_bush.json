@@ -1,12 +1,12 @@
 {
-  "feature": "crystal:red_tree",
+  "feature": "crystal:tree/ember_bush",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "crystal:red_sapling",
+          "Name": "crystal:light_gray_sapling",
           "Properties": {
             "stage": "0"
           }

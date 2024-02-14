@@ -1,12 +1,12 @@
 {
-  "feature": "crystal:light_gray_tree",
+  "feature": "crystal:tree/lime_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "crystal:light_gray_sapling",
+          "Name": "crystal:lime_sapling",
           "Properties": {
             "stage": "0"
           }

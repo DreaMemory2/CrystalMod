@@ -1,12 +1,12 @@
 {
-  "feature": "crystal:purple_tree",
+  "feature": "crystal:tree/pink_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "crystal:purple_sapling",
+          "Name": "crystal:pink_sapling",
           "Properties": {
             "stage": "0"
           }

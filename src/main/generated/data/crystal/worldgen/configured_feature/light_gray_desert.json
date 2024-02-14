@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "crystal:tree/ember_bush",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 1.0,
+        "feature": {
+          "feature": "crystal:tree/ember_bush",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

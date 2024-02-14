@@ -1,12 +1,12 @@
 {
-  "feature": "crystal:cyan_tree",
+  "feature": "crystal:tree/brown_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "crystal:cyan_sapling",
+          "Name": "crystal:brown_sapling",
           "Properties": {
             "stage": "0"
           }

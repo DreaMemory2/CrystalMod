@@ -31,7 +31,7 @@ public class TreePlacedFeatures {
     public static final RegistryKey<PlacedFeature> MAGENTA_CHECKED = registry("magenta_checked");
     public static final RegistryKey<PlacedFeature> PINK_CHECKED = registry("pink_checked");
     // 灰烬灌木
-    public static final RegistryKey<PlacedFeature> EMBER_BUSH = PlacedFeatures.of("ember_bush");
+    public static final RegistryKey<PlacedFeature> EMBER_BUSH = registry("ember_bush");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -74,6 +74,6 @@ public class TreePlacedFeatures {
     }
 
     private static RegistryKey<PlacedFeature> registry(String id) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(CrystalMod.MODID, id));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(CrystalMod.MODID, "tree/" + id));
     }
 }

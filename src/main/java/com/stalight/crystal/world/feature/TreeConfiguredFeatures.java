@@ -93,6 +93,6 @@ public class TreeConfiguredFeatures {
     }
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registry(String id) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(CrystalMod.MODID, id));
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(CrystalMod.MODID, "tree/" + id));
     }
 }

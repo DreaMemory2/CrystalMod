@@ -21,10 +21,17 @@ public class SurfaceRuleData {
 
         builder.add(MaterialRules.condition(MaterialRules.surface(), MaterialRules.sequence(
 
-                surface(ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt, ModBiomes.frostForest)
+                surface(ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt, ModBiomes.frostForest),
+                surface(ModBlocks.lightGrayGrassBlock, ModBlocks.lightGrayDirt, ModBiomes.emberDesert),
+                surface(ModBlocks.grayGrassBlock, ModBlocks.grayDirt, ModBiomes.emberPlain),
+                surface(ModBlocks.blackGrassBlock, ModBlocks.blackDirt, ModBiomes.darkTree)
+
         )));
 
         builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), makeStateRule(ModBlocks.whiteStone)));
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.emberDesert), makeStateRule(ModBlocks.lightGrayStone)));
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.emberPlain), makeStateRule(ModBlocks.grayStone)));
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.darkTree), makeStateRule(ModBlocks.blackStone)));
 
         return MaterialRules.sequence(builder.build().toArray(MaterialRules.MaterialRule[]::new));
     }

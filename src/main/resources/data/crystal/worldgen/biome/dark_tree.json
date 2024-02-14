@@ -1,12 +1,12 @@
 {
-  "temperature": 2,
+  "temperature": 0.7,
   "downfall": 0,
   "has_precipitation": false,
   "effects": {
-    "sky_color": 11119017,
-    "fog_color": 14474460,
-    "water_color": 11119017,
-    "water_fog_color": 4013373
+    "sky_color": 0,
+    "fog_color": 0,
+    "water_color": 329011,
+    "water_fog_color": 329011
   },
   "spawners": {},
   "spawn_costs": {},
@@ -19,10 +19,8 @@
   },
   "features": [
     [
-      "crystal:light_gray_desert"
-    ],
-    [
-      "minecraft:patch_dead_bush_2"
+      "crystal:dark_tree"
     ]
   ]
 }
+

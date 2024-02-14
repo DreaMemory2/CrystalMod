@@ -1,6 +1,6 @@
 package com.stalight.crystal.register;
 
-import com.stalight.crystal.world.feature.TreePlacedFeatures;
+import com.stalight.crystal.world.feature.VegetationPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;
@@ -12,12 +12,13 @@ public class ModGeneration {
     }
 
     private static void generateTrees() {
-        // 枫树只生成在森林生态群系
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.frostForest),
-                GenerationStep.Feature.VEGETAL_DECORATION, TreePlacedFeatures.WHITE_CHECKED);
+                GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.WHITE_FOREST_VEGETATION);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.emberDesert),
+                GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.LIGHT_GRAY_DESERT);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.emberPlain),
+                GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.GRAY_PLAINS);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(ModBiomes.darkTree),
+                GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.DART_TREE);
     }
-
-    /*
-    data\minecraft\worldgen\placed_feature\trees_taiga.json
-     */
 }

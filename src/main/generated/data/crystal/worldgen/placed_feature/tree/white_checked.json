@@ -1,12 +1,12 @@
 {
-  "feature": "crystal:gray_tree",
+  "feature": "crystal:tree/white_tree",
   "placement": [
     {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "crystal:gray_sapling",
+          "Name": "crystal:white_sapling",
           "Properties": {
             "stage": "0"
           }
