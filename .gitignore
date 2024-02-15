@@ -41,3 +41,6 @@ replay_*.log
 
 # Test
 src/test/
+
+# Main
+generated/.cache
