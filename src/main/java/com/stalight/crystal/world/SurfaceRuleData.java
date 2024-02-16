@@ -8,6 +8,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.YOffset;
+import net.minecraft.world.gen.noise.NoiseParametersKeys;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 
 public class SurfaceRuleData {
@@ -21,14 +22,34 @@ public class SurfaceRuleData {
 
         builder.add(MaterialRules.condition(MaterialRules.surface(), MaterialRules.sequence(
 
-                surface(ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt, ModBiomes.frostForest),
+                // surface(ModBlocks.whiteGrassBlock, ModBlocks.whiteDirt, ModBiomes.frostForest),
+                // surface(Blocks.POWDER_SNOW, Blocks.SNOW, ModBiomes.frostPlains),
                 surface(ModBlocks.lightGrayGrassBlock, ModBlocks.lightGrayDirt, ModBiomes.emberDesert),
                 surface(ModBlocks.grayGrassBlock, ModBlocks.grayDirt, ModBiomes.emberPlain),
                 surface(ModBlocks.blackGrassBlock, ModBlocks.blackDirt, ModBiomes.darkTree)
 
         )));
+        // 雪林表面为细雪和雪块
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest, ModBiomes.frostPlains),
+                MaterialRules.sequence(
+                        // 偶尔生成Powder Snow
+                        MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.POWDER_SNOW, 0.35, 0.6),
+                                MaterialRules.condition(MaterialRules.water(0, 0), makeStateRule(Blocks.POWDER_SNOW))),
+                        // 默认为White Grass
+                        MaterialRules.condition(MaterialRules.water(0, 0), makeStateRule(ModBlocks.whiteGrassBlock)))));
 
-        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), makeStateRule(ModBlocks.whiteStone)));
+        // builder.add(MaterialRules.condition(MaterialRules.condition()));
+
+        // 雪林表面为细雪和雪块
+        builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), MaterialRules.sequence(
+                // 偶尔生成Powder Snow
+                MaterialRules.condition(MaterialRules.noiseThreshold(NoiseParametersKeys.POWDER_SNOW, 0.35, 0.6),
+                        MaterialRules.condition(MaterialRules.water(0, 0), makeStateRule(Blocks.POWDER_SNOW))),
+                // 默认为White Grass
+                MaterialRules.condition(MaterialRules.water(0, 0), makeStateRule(ModBlocks.whiteGrassBlock))
+        )));
+
+        // builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.frostForest), makeStateRule(ModBlocks.whiteStone)));
         builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.emberDesert), makeStateRule(ModBlocks.lightGrayStone)));
         builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.emberPlain), makeStateRule(ModBlocks.grayStone)));
         builder.add(MaterialRules.condition(MaterialRules.biome(ModBiomes.darkTree), makeStateRule(ModBlocks.blackStone)));
@@ -36,9 +57,9 @@ public class SurfaceRuleData {
         return MaterialRules.sequence(builder.build().toArray(MaterialRules.MaterialRule[]::new));
     }
 
+    @SafeVarargs
     private static MaterialRules.MaterialRule surface(Block grassBlock, Block dirt, RegistryKey<Biome> ... biomes) {
-        return MaterialRules.condition(MaterialRules.biome(biomes),
-                MaterialRules.sequence(
+        return MaterialRules.condition(MaterialRules.biome(biomes), MaterialRules.sequence(
                         /*地表设置*/surfaceSetting(grassBlock, dirt),
                         /*地表厚度*/surfaceDepth(dirt)));
     }

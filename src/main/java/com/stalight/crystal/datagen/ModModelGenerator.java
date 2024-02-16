@@ -134,6 +134,9 @@ public class ModModelGenerator extends FabricModelProvider {
         registerGrassBlock(block, ModBlocks.purpleGrassBlock, ModBlocks.purpleDirt);
         registerGrassBlock(block, ModBlocks.magentaGrassBlock, ModBlocks.magentaDirt);
         registerGrassBlock(block, ModBlocks.pinkGrassBlock, ModBlocks.pinkDirt);
+
+        block.registerSingleton(BlockList.frostMelon, TexturedModel.CUBE_COLUMN);
+        block.registerTintableCross(ModBlocks.whiteShortGrassBlock, TintType.TINTED);
     }
 
     @Override

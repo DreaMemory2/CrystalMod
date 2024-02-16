@@ -1,6 +1,7 @@
 package com.stalight.crystal;
 
 import com.stalight.crystal.block.BlockList;
+import com.stalight.crystal.register.ModBlocks;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
@@ -41,5 +42,7 @@ public class CrystalModClient implements ClientModInitializer {
 		BlockRenderLayerMap.INSTANCE.putBlock(BlockList.purpleSapling, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockList.magentaSapling, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(BlockList.pinkSapling, RenderLayer.getCutout());
+
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.whiteShortGrassBlock, RenderLayer.getCutout());
 	}
 }

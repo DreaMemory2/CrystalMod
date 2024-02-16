@@ -4,6 +4,7 @@ import com.stalight.crystal.CrystalMod;
 import com.stalight.crystal.block.BlockList;
 import com.stalight.crystal.block.CrystalGrassBlock;
 import com.stalight.crystal.block.SaplingGenerators;
+import com.stalight.crystal.block.ShortGrassBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -50,22 +51,25 @@ public class ModBlocks {
     public static Block magentaStone = registerBlocks("magenta_stone", Blocks.STONE);
     public static Block pinkStone = registerBlocks("pink_stone", Blocks.STONE);
 
-    public static Block whiteGrassBlock = registerGrassBlock("white_grass", ModBlocks.whiteDirt);
-    public static Block lightGrayGrassBlock = registerGrassBlock("light_gray_grass", ModBlocks.lightGrayDirt);
-    public static Block grayGrassBlock = registerGrassBlock("gray_grass", ModBlocks.grayDirt);
-    public static Block blackGrassBlock = registerGrassBlock("black_grass", ModBlocks.blackDirt);
-    public static Block brownGrassBlock = registerGrassBlock("brown_grass", ModBlocks.brownDirt);
-    public static Block redGrassBlock = registerGrassBlock("red_grass", ModBlocks.redDirt);
-    public static Block orangeGrassBlock = registerGrassBlock("orange_grass", ModBlocks.orangeDirt);
-    public static Block yellowGrassBlock = registerGrassBlock("yellow_grass", ModBlocks.yellowDirt);
-    public static Block limeGrassBlock = registerGrassBlock("lime_grass", ModBlocks.limeDirt);
-    public static Block greenGrassBlock = registerGrassBlock("green_grass", ModBlocks.greenDirt);
-    public static Block cyanGrassBlock = registerGrassBlock("cyan_grass", ModBlocks.cyanDirt);
-    public static Block lightBlueGrassBlock = registerGrassBlock("light_blue_grass", ModBlocks.lightBlueDirt);
-    public static Block blueGrassBlock = registerGrassBlock("blue_grass", ModBlocks.blueDirt);
-    public static Block purpleGrassBlock = registerGrassBlock("purple_grass", ModBlocks.purpleDirt);
-    public static Block magentaGrassBlock = registerGrassBlock("magenta_grass", ModBlocks.magentaDirt);
-    public static Block pinkGrassBlock = registerGrassBlock("pink_grass", ModBlocks.pinkDirt);
+    public static Block whiteGrassBlock = registerGrassBlock("white_grass_block", ModBlocks.whiteDirt);
+    public static Block lightGrayGrassBlock = registerGrassBlock("light_gray_grass_block", ModBlocks.lightGrayDirt);
+    public static Block grayGrassBlock = registerGrassBlock("gray_grass_block", ModBlocks.grayDirt);
+    public static Block blackGrassBlock = registerGrassBlock("black_grass_block", ModBlocks.blackDirt);
+    public static Block brownGrassBlock = registerGrassBlock("brown_grass_block", ModBlocks.brownDirt);
+    public static Block redGrassBlock = registerGrassBlock("red_grass_block", ModBlocks.redDirt);
+    public static Block orangeGrassBlock = registerGrassBlock("orange_grass_block", ModBlocks.orangeDirt);
+    public static Block yellowGrassBlock = registerGrassBlock("yellow_grass_block", ModBlocks.yellowDirt);
+    public static Block limeGrassBlock = registerGrassBlock("lime_grass_block", ModBlocks.limeDirt);
+    public static Block greenGrassBlock = registerGrassBlock("green_grass_block", ModBlocks.greenDirt);
+    public static Block cyanGrassBlock = registerGrassBlock("cyan_grass_block", ModBlocks.cyanDirt);
+    public static Block lightBlueGrassBlock = registerGrassBlock("light_blue_grass_block", ModBlocks.lightBlueDirt);
+    public static Block blueGrassBlock = registerGrassBlock("blue_grass_block", ModBlocks.blueDirt);
+    public static Block purpleGrassBlock = registerGrassBlock("purple_grass_block", ModBlocks.purpleDirt);
+    public static Block magentaGrassBlock = registerGrassBlock("magenta_grass_block", ModBlocks.magentaDirt);
+    public static Block pinkGrassBlock = registerGrassBlock("pink_grass_block", ModBlocks.pinkDirt);
+
+    // Plant Block
+    public static Block whiteShortGrassBlock = registerBlock("white_short_grass", new ShortGrassBlock());
 
     public static void registerBlocks() {
 
@@ -136,6 +140,8 @@ public class ModBlocks {
         BlockList.purpleLog = registerPillarBlocks("purple_log");
         BlockList.magentaLog = registerPillarBlocks("magenta_log");
         BlockList.pinkLog = registerPillarBlocks("pink_log");
+
+        BlockList.frostMelon = registerBlocks("frost_melon", Blocks.MELON);
     }
 
     private static Block registerBlocks(String id, Block block) {

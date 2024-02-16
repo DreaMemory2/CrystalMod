@@ -16,11 +16,8 @@
   "carvers": {},
   "features": [
     [
-      "crystal:white_forest_vegetation"
-    ],
-    [
       "crystal:patch_frost_melon",
-      "crystal:patch_white_grass_forest"
+      "crystal:patch_white_grass_plain"
     ],
     [
       "minecraft:freeze_top_layer"

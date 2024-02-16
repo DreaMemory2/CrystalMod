@@ -21,40 +21,6 @@ public class BlockList {
     public static Block purpleStoneBrick;
     public static Block pinkStoneBrick;
 
-    public static Block whiteStone;
-    public static Block lightGrayStone;
-    public static Block grayStone;
-    public static Block blackStone;
-    public static Block brownStone;
-    public static Block redStone;
-    public static Block orangeStone;
-    public static Block yellowStone;
-    public static Block limeStone;
-    public static Block greenStone;
-    public static Block cyanStone;
-    public static Block lightBlueStone;
-    public static Block blueStone;
-    public static Block magentaStone;
-    public static Block purpleStone;
-    public static Block pinkStone;
-
-    public static Block whiteDirt;
-    public static Block lightGrayDirt;
-    public static Block grayDirt;
-    public static Block blackDirt;
-    public static Block brownDirt;
-    public static Block redDirt;
-    public static Block orangeDirt;
-    public static Block yellowDirt;
-    public static Block limeDirt;
-    public static Block greenDirt;
-    public static Block cyanDirt;
-    public static Block lightBlueDirt;
-    public static Block blueDirt;
-    public static Block magentaDirt;
-    public static Block purpleDirt;
-    public static Block pinkDirt;
-
     public static Block whiteLog;
     public static Block lightGrayLog;
     public static Block grayLog;
@@ -105,4 +71,6 @@ public class BlockList {
     public static Block magentaSapling;
     public static Block purpleSapling;
     public static Block pinkSapling;
+
+    public static Block frostMelon;
 }

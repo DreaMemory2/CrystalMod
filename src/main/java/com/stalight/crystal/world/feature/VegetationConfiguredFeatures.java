@@ -1,6 +1,8 @@
 package com.stalight.crystal.world.feature;
 
 import com.stalight.crystal.CrystalMod;
+import com.stalight.crystal.block.BlockList;
+import com.stalight.crystal.register.ModBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -8,6 +10,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 
 import java.util.List;
 
@@ -16,6 +19,8 @@ public class VegetationConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> LIGHT_GRAY_DESERT = registerConfiguredFeatures("light_gray_desert");
     public static final RegistryKey<ConfiguredFeature<?, ?>> GRAY_PLAINS =  registerConfiguredFeatures("gray_plains");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DARK_TREE = registerConfiguredFeatures("dark_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PATCH_FROST_MELON = registerConfiguredFeatures("patch_frost_melon");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WHITE_GRASS = registerConfiguredFeatures("white_grass");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -23,7 +28,9 @@ public class VegetationConfiguredFeatures {
         RegistryEntry.Reference<ConfiguredFeature<?, ?>> grayTreeChecked = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.GRAY_TREE);
         // 灰烬灌木
         RegistryEntry.Reference<ConfiguredFeature<?, ?>> emberBush = registryEntryLookup.getOrThrow(TreeConfiguredFeatures.EMBER_BUSH);
-
+        //
+        ConfiguredFeatures.register(featureRegisterable, WHITE_GRASS, Feature.RANDOM_PATCH,
+                VegetationConfiguredFeatures.createRandomPatchFeatureConfig(BlockStateProvider.of(ModBlocks.whiteShortGrassBlock), 32));
         RegistryEntryLookup<PlacedFeature> registryEntryLookup2 = featureRegisterable.getRegistryLookup(RegistryKeys.PLACED_FEATURE);
         RegistryEntry.Reference<PlacedFeature> whiteTree = registryEntryLookup2.getOrThrow(TreePlacedFeatures.WHITE_CHECKED);
         RegistryEntry.Reference<PlacedFeature> lightGrayTree = registryEntryLookup2.getOrThrow(TreePlacedFeatures.LIGHT_GRAY_CHECKED);
@@ -32,6 +39,10 @@ public class VegetationConfiguredFeatures {
         // 冰霜森林配置
         ConfiguredFeatures.register(featureRegisterable, WHITE_FOREST_VEGETATION, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(lightGrayTree, 0.1f)), whiteTree));
+        // 冰霜西瓜堆配置
+        RandomPatchFeatureConfig frostMelon = ConfiguredFeatures.createRandomPatchFeatureConfig(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(BlockList.frostMelon)), List.of(ModBlocks.whiteGrassBlock));
+        ConfiguredFeatures.register(featureRegisterable, PATCH_FROST_MELON, Feature.RANDOM_PATCH, frostMelon);
         // 灰烬荒漠配置
         ConfiguredFeatures.register(featureRegisterable, LIGHT_GRAY_DESERT, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(PlacedFeatures.createEntry(emberBush), 1.0f)),
@@ -44,6 +55,10 @@ public class VegetationConfiguredFeatures {
         // 黑暗森林植被配置
         ConfiguredFeatures.register(featureRegisterable, DARK_TREE, Feature.RANDOM_SELECTOR,
                 new RandomFeatureConfig(List.of(new RandomFeatureEntry(blackTree, 0.6666667f)), grayTree));
+    }
+
+    private static RandomPatchFeatureConfig createRandomPatchFeatureConfig(BlockStateProvider block, int tries) {
+        return ConfiguredFeatures.createRandomPatchFeatureConfig(tries, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(block)));
     }
 
     private static RegistryKey<ConfiguredFeature<?, ?>> registerConfiguredFeatures(String id) {

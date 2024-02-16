@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "crystal:block/frost_melon_top",
+    "side": "crystal:block/frost_melon_side"
+  }
+}
